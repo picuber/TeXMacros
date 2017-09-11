@@ -1,0 +1,32 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools} %for better possibilities with matrices
+\usepackage{graphicx}
+\usepackage[left=20mm, right=20mm, top=20mm, bottom=20mm]{geometry} %set margin
+
+\usepackage{paralist} %enumeration/lists
+\usepackage{tikz} %graphs/diagrams
+\usepackage{forest} % easier trees
+\usepackage{array} %"tables" for mathmode
+\usepackage{centernot} % \centernot \implies
+\usepackage{multicol} %multiple text collums
+\usepackage{fancyvrb} %verbatim with Tabs (\begin{Verbatim} \end{Verbatim})
+	\fvset{tabsize=4}
+\usepackage{xstring} %for \matrix{}, Stringmanipulation
+\usepackage{listings} %for code blocks
+\usepackage{color} %for colours
+
+% Macros
+\newcommand{\qed}{\(\square\)} %\qed
+\renewcommand{\matrix}[1]{ %easier to write martices, can replace '&' with ',' and '\\' with ';'
+	\begingroup\expandarg
+	\StrSubstitute{\noexpand#1}{, }{ & }[\result]
+	\StrSubstitute\result{\noexpand;}{\noexpand\\}[\result]
+	\begin{pmatrix}\result\end{pmatrix}
+	\endgroup
+}

@@ -1,0 +1,15 @@
+% provides different styles for forest trees
+% needs \usepackage{forest}
+
+% for all Trees in document
+% \forestset{default preamble={intTree}}
+% before \begin{document}
+
+\forestset{
+	intTree/.style={
+		for tree={draw, circle}
+	},
+	abTree/.style={
+		for tree={draw, rounded corners=3mm, inner sep=1em}
+	}
+}

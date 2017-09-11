@@ -1,0 +1,14 @@
+% Usage: 
+% \begin{pmatrix}[ccc|ccc]
+%	a & a & a & b & b & b
+% \end{pmatrix}
+
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+   \hskip -\arraycolsep
+   \let\@ifnextchar\new@ifnextchar
+   \array{#1}}
+\makeatother
+
+\newcommand{\amatrix}[2][ccc|ccc]{\begin{pmatrix}[#1]#2\end{pmatrix}}

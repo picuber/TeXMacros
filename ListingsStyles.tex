@@ -1,0 +1,46 @@
+% provides different styles for listings
+% needs \usepackage{listings}
+
+% for all listings in document
+% \lstset{style={intTree}}
+% before \begin{document}
+
+
+\lstdefinestyle{commandline}{
+	language=bash,
+	backgroundcolor=\color{black},
+	basicstyle=\footnotesize\ttfamily\color{white},
+	breakatwhitespace=false,
+	breakindent=0pt,
+	breaklines=true,
+	commentstyle=\color{lightgray},
+	deletekeywords={},
+	keepspaces=true,
+	numbers=none,
+	otherkeywords={},
+	showspaces=false,
+	showstringspaces=false,
+	showtabs=false, 
+	stepnumber=1,
+	stringstyle=\color{green}
+}
+
+\lstdefinestyle{assembler}{
+	language={[x86masm]Assembler},
+	backgroundcolor=\color{black},
+	basicstyle=\footnotesize\ttfamily\color{white},
+	breakatwhitespace=false,
+	breakindent=0pt,
+	breaklines=true,
+	commentstyle=\color{lightgray},
+	deletekeywords={},
+	keepspaces=true,
+	keywordstyle=\color{blue},
+	numbers=none,
+	otherkeywords={},
+	showspaces=false,
+	showstringspaces=false,
+	showtabs=false, 
+	stepnumber=1,
+	stringstyle=\color{green}
+}
