@@ -20,10 +20,12 @@
 \usepackage{xstring} %for \matrix{}, Stringmanipulation
 \usepackage{listings} %for code blocks
 \usepackage{color} %for colours
+\usepackage{pdfpages} %for including external pdf pages (\includepdf[pages={-}]{file})
 
 % Macros
 \newcommand{\qed}{\(\square\)} %\qed
-\renewcommand{\matrix}[1]{ %easier to write martices, can replace '&' with ',' and '\\' with ';'
+	%easier to write martices, can replace '&' with ',' and '\\' with ';'
+\renewcommand{\matrix}[1]{
 	\begingroup\expandarg
 	\StrSubstitute{\noexpand#1}{, }{ & }[\result]
 	\StrSubstitute\result{\noexpand;}{\noexpand\\}[\result]
